@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Орозбек & Астра — Чакыруу</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f1e8;
+  color: #3b302c;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+  width: min(100% - 28px, 450px);
+  margin: auto;
+  padding: 25px 0 40px;
+  text-align: center;
+}
+
+.top-title {
+  color: #9b876b;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 864 / 1536;
+  overflow: hidden;
+  border: 1px solid #d7c6ac;
+  box-shadow: 0 15px 35px #6c554022;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-text {
+  position: absolute;
+  bottom: 16%;
+  left: 5%;
+  right: 5%;
+  color: #a36f79;
+  text-shadow: 0 1px 10px white;
+}
+
+.cover-text h1 {
+  font-size: 42px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.open-button,
+.music-button {
+  border: 1px solid #c5ac85;
+  border-radius: 30px;
+  padding: 13px 22px;
+  background: #fffaf2;
+  color: #8e744f;
+  cursor: pointer;
+  font: 12px Arial, sans-serif;
+}
+
+.open-button {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.hint {
+  color: #9b876b;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+  margin: 20px 0;
+}
+
+.invitation {
+  display: none;
+  margin-top: 20px;
+  padding: 35px 22px;
+  background: #fffdf8;
+  border: 1px solid #e2d2ba;
+  animation: fadeIn 1s ease;
+}
+
+.invitation.show {
+  display: block;
+}
+
+.small-title {
+  color: #a38a67;
+  font: 10px Arial, sans-serif;
+  letter-spacing: 3px;
+}
+
+.invitation h2 {
+  color: #a36f79;
+  font-size: 42px;
+  font-weight: normal;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.gold {
+  color: #b99b69;
+}
+
+.line {
+  width: 90px;
+  height: 1px;
+  background: #b99b69;
+  margin: 20px auto;
+}
+
+.message {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.details {
+  border-top: 1px solid #e7d9c7;
+  border-bottom: 1px solid #e7d9c7;
+  margin: 25px 0;
+  padding: 20px 0;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.details strong {
+  display: block;
+  color: #a78058;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.host {
+  color: #a36f79;
+  font-size: 27px;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.music-button {
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <div class="top-title">
+    СИЗГЕ ӨЗГӨЧӨ ЧАКЫРУУ
+  </div>
+
+  <!-- Башкы сүрөт жана конверт -->
+  <section class="cover" id="cover">
+
+    <img src="assets/cover.jpg"
+         alt="Үйлөнүү үлпөтүнө чакыруу">
+
+    <div class="cover-text">
+      <div>ҮЙЛӨНҮҮ ҮЛПӨТҮ</div>
+      <h1>Орозбек <span class="gold">&</span> Астра</h1>
+    </div>
+
+    <button class="open-button" id="openButton">
+      ЧАКЫРУУНУ АЧУУ ♡
+    </button>
+
+  </section>
+
+  <div class="hint" id="hint">
+    ЧАКЫРУУНУ АЧУУ ҮЧҮН БАСЫҢЫЗ
+  </div>
+
+  <!-- Чакыруу баракчасы -->
+  <section class="invitation" id="invitation">
+
+    <div class="small-title">
+      ҮЙЛӨНҮҮ ҮЛПӨТҮНӨ ЧАКЫРУУ
+    </div>
+
+    <h2>
+      Орозбек <span class="gold">&</span> Астра
+    </h2>
+
+    <div class="line"></div>
+
+    <p class="message">
+      Урматтуу жакындарыбыз!<br><br>
+
+      Сиздерди үйлөнүү тоюбузга келип,
+      ак баталарыңызды берип,
+      кубанычыбызга ортоктош болууга
+      чакырабыз!
+    </p>
+
+    <div class="details">
+
+      <strong>КҮНҮ ЖАНА УБАКТЫСЫ</strong>
+      10-декабрь<br>
+      Саат 18:00
+
+      <br><br>
+
+      <strong>ДАРЕГИБИЗ</strong>
+      Базар-Коргон шаары<br>
+      «Алтын Сарай» рестораны
+
+    </div>
+
+    <div class="small-title">
+      ТОЙ ЧАКЫРГАНДАР
+    </div>
+
+    <div class="host">
+      Назира
+    </div>
+
+    <p class="message">
+      Тойго келип, конок болуп
+      кетишиңиздерди күтөбүз!
+    </p>
+
+    <!-- Музыка башкаруу -->
+    <button class="music-button" id="musicButton">
+      ♫ Музыканы күйгүзүү
+    </button>
+
+    <audio id="weddingMusic"
+           src="assets/music.mp3"
+           loop>
+    </audio>
+
+  </section>
+
+</div>
+
+<script>
+const openButton =
+  document.getElementById("openButton");
+
+const invitation =
+  document.getElementById("invitation");
+
+const hint =
+  document.getElementById("hint");
+
+const music =
+  document.getElementById("weddingMusic");
+
+const musicButton =
+  document.getElementById("musicButton");
+
+let opened = false;
+
+
+// Конвертти басканда чакыруу ачылат
+openButton.addEventListener("click", async function() {
+
+  if (opened) return;
+
+  opened = true;
+
+  invitation.classList.add("show");
+
+  hint.textContent = "ЧАКЫРУУ АЧЫЛДЫ ♡";
+
+  openButton.textContent = "ЧАКЫРУУ АЧЫЛДЫ";
+
+  invitation.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  // Музыка ойной баштайт
+  try {
+    await music.play();
+
+    musicButton.textContent =
+      "♫ Музыканы токтотуу";
+
+  } catch (error) {
+
+    musicButton.textContent =
+      "♫ Музыканы күйгүзүү";
+
+  }
+
+});
+
+
+// Музыканы күйгүзүү жана токтотуу
+musicButton.addEventListener("click", async function() {
+
+  if (music.paused) {
+
+    try {
+
+      await music.play();
+
+      musicButton.textContent =
+        "♫ Музыканы токтотуу";
+
+    } catch (error) {
+
+      alert(
+        "Музыка файлын assets/music.mp3 папкасына жүктөңүз"
+      );
+
+    }
+
+  } else {
+
+    music.pause();
+
+    musicButton.textContent =
+      "♫ Музыканы күйгүзүү";
+
+  }
+
+});
+</script>
+
+</body>
+  </html>
